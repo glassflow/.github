@@ -5,9 +5,9 @@ data pipelines. It delivers auto-scalable serverless event-streaming infrastruct
 
 ## Getting Started
 
-Follow the [quickstart guide](https://learn.glassflow.dev/docs/get-started/quickstart) to run GlassFlow, create your first pipeline, produce and consume data.
+Follow the [quickstart guide](https://docs.glassflow.dev/get-started/quickstart) to run GlassFlow, create your first pipeline, produce and consume data.
 
-To dive deeper into GlassFlow, check out our [official documentation](https://learn.glassflow.dev/docs). 
+To dive deeper into GlassFlow, check out our [official documentation](https://docs.glassflow.dev). 
 You’ll find detailed guides, tutorials, and examples to help you make the most of this powerful tool.
 
 ## Code Samples

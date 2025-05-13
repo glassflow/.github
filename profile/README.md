@@ -1,5 +1,5 @@
 <a href="https://glassflow.dev">
-  <img alt="GlassFlow Logo" src="https://raw.githubusercontent.com/glassflow/clickhouse-etl/main/docs/assets/glassfow-banner.jpg">
+  <img alt="GlassFlow Logo" src="https://raw.githubusercontent.com/glassflow/clickhouse-etl/main/docs/public/assets/glassfow-banner.jpg">
 </a>
 <p align="center">
 <a href="https://hub.docker.com/u/glassflow" target="_blank">

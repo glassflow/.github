@@ -1,13 +1,5 @@
-<a href="https://glassflow.dev">
+<a href="https://glassflow.ai">
   <img alt="GlassFlow Logo" src="https://raw.githubusercontent.com/glassflow/.github/main/profile/assets/banner.png">
-</a>
-<p align="center">
-<a href="https://hub.docker.com/u/glassflow" target="_blank">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white">
-</a>
-<a href="https://github.com/glassflow/clickhouse-etl" target="_blank">
-<img alt="GitHub" src="https://img.shields.io/badge/glassflow/clickhouse--etl-181717?logo=github&logoColor=white">
-</a>
 <a href="https://www.linkedin.com/company/glassflow-dev" target="_blank">
 <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white">
 </a>
@@ -17,52 +9,37 @@
 </p>
 
 
-# GlassFlow Overview
+# GlassFlow: Agent Observability & Data Plane for Production AI Agents
 
-GlassFlow is an open source streaming ETL and stream processor designed to simplify data pipeline creation and management from multiple sources into ClickHouse. It provides a powerful, user-friendly interface for building and managing real-time data pipelines with built-in support for deduplication and temporal joins.
+GlassFlow is an AI-native data infrastructure company building the observability and data plane for production AI agents. We make two products for teams running agents that work for hours, not seconds: Rius for agent observability, and Tares for the agent data plane.
 
-GlassFlow handles late-arriving events, ensures exactly-once correctness, and scales with high-throughput data. It delivers accurate, low-latency results from streaming, telemetry or other data types without compromising simplicity or performance. The tool's intuitive web interface makes it easy to configure and monitor pipelines, while its robust architecture ensures reliable data processing.
+Two products. One umbrella.
 
+## Rius: Agent observability
+Rius is a managed observability platform for AI agents running. There's nothing to host and no infrastructure to run. You simply point your agents at Rius and you can see what they decided, why they failed, and how quality is trending, even while they're still running. It's built for long-running, always-on agents rather than short chat sessions.
 
-## Key Features
+### Rius Features
+- **Long-running agent support**: traces and metrics that keep updating mid-run, so you're not waiting for an agent to finish to see what it's doing.
+- **Liveness heartbeats**: tell a clean shutdown apart from a silent crash, instead of a frozen agent looking identical to a healthy one.
+- **MCP in both directions**: agents send traces in, and coding agents like Claude Code query Rius back out to investigate failures and open a fix.
+- **Privacy controls**: decide what gets captured and what stays redacted before it ever leaves your agent.
+- **Shared views**: send a read-only link to a trace so a teammate can see exactly what you saw.
 
-- **Deduplication**:
-  - Real-time deduplication of Kafka or OpenTelemetry streams before ingestion into ClickHouse
-  - Configurable time windows up to 7 days for deduplication
-  - Simple configuration of deduplication keys and time windows
-  - One-click setup for deduplicated data pipelines
-  - Prevents duplicate data from reaching ClickHouse
+→ [Get started](https://eu.console.rius-glassflow.com/signin?utm_source=github&utm_medium=website&utm_campaign=github_get_started) · [Docs](https://docs.glassflow.ai/rius)
 
-- **Built-in Data Source Connectors**:
-  - Automatic data extraction from multiple sources
-  - Seamless integration with Kafka clusters, OTel Connectors and other sources
-  - No manual data pulling required
-  - Native support for JSON data types
+## Tares: Agent data plane
+Tares is an open-source data plane for AI agents that runs locally. Instead of an agent calling each tool one by one at runtime, Tares prepares and serves the exact data package the agent needs, when it needs it. The result is less token burn, lower latency, and fewer runtime tool calls.
 
-- **Optimized ClickHouse Sink**:
-  - Native ClickHouse connection for maximum performance
-  - Configurable batch sizes for efficient data ingestion
-  - Adjustable wait times for optimal throughput
-  - Built-in retry mechanisms
-  - Automatic schema detection and management
-  - Full support for JSON data types in ClickHouse
+### Tares Features
+- **Local-first**: open source, runs in your own environment, no managed dependency.
+- **Prepared data packages**: assembles the right context ahead of time instead of at runtime.
+- **MCP-native**: serves data to your agents over MCP, the same protocol they already speak.
+- **Lower cost and latency**: fewer live tool calls mean fewer tokens and less waiting.
+- **Framework-agnostic**: works with Claude Code, Cursor, and your own agents.
 
-- **User-Friendly Interface**: Web-based UI for pipeline configuration and management
-- **Local Development**: Includes demo setup with local Kafka and ClickHouse instances
-- **Docker Support**: Easy deployment using Docker and docker-compose
-- **Self-Hosted**: Open-source solution that can be self-hosted in your infrastructure
+→ [Repo](https://github.com/glassflow/tares) · [Docs](https://docs.glassflow.ai/tares)
 
-## Getting Started
+Rius and Tares are two halves of the same idea: agents running in production need both a clear view of what they're doing and the right data to do it well. GlassFlow builds both: OpenTelemetry-native, MCP-first, and grounded in years of streaming and ClickHouse infrastructure work. Whether you're debugging a 72-hour run or feeding an always-on agent the context it needs, the goal is the same: agents you can actually see, understand, and trust in production.
 
-To get started with GlassFlow, visit our main repository at [glassflow/clickhouse-etl](https://github.com/glassflow/clickhouse-etl). The repository contains:
+[Docs](https://docs.glassflow.ai) | [Blog](https://glassflow.ai/blog) | [X](https://x.com/glassflowdev)
 
-- Complete documentation
-- Quick start guide
-- Example configurations
-- Docker setup instructions
-- API documentation
-
-Clone the repository to get started:
-```bash
-git clone https://github.com/glassflow/clickhouse-etl.git
-```

@@ -53,7 +53,5 @@ Cursor and your own agents over MCP.
 
 | Repository | What it is |
 |---|---|
-| [clickhouse-etl](https://github.com/glassflow/clickhouse-etl) | GlassFlow ETL: streaming ingestion into ClickHouse with deduplication and temporal joins ([docs](https://glassflow-etl.com)) |
 | [rius-coding-agents](https://github.com/glassflow/rius-coding-agents) | Rius for Claude Code: every session as a live trace |
 | [rius-sdk-python](https://github.com/glassflow/rius-sdk-python) · [rius-sdk-typescript](https://github.com/glassflow/rius-sdk-typescript) | OpenTelemetry-native tracing SDKs for agents and LLM apps |
-| [glassgen](https://github.com/glassflow/glassgen) | Synthetic data generator with configurable schemas, sinks and duplication |
